@@ -1,40 +1,111 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- Title slide -->
+			<section>
+				<h1>Quarterly Earnings — Q2 2025</h1>
+				<h3>Financial Results & Key Metrics</h3>
+				<p style="margin-top:1.5rem; font-size:0.9rem">Presenter: Investor Relations — contact: <a
+						href="mailto:24f1001694@ds.study.iitm.ac.in">24f1001694@ds.study.iitm.ac.in</a></p>
+				<aside class="notes">Welcome stakeholders. Give 30s overview: topline, margin, and guidance.</aside>
+			</section>
+
+			<!-- Markdown slide (uses Reveal's markdown plugin) -->
+			<section data-markdown>
+				<textarea data-template>
+				## Highlights
+
+				- Revenue grew **12% YoY**
+				- Adjusted EBITDA margin improved to **18.4%**
+				- Guidance raised for FY25
+
+				_Contact_: 24f1001694@ds.study.iitm.ac.in
+					</textarea>
+				<aside class="notes">Read highlights slowly; pause for questions after the highlights slide.</aside>
+			</section>
+
+			<!-- Fragment/animated elements -->
+			<section>
+				<h2>Key Drivers</h2>
+				<ul>
+					<li class="fragment">Strong volume growth in APAC</li>
+					<li class="fragment">Favourable FX tailwind</li>
+					<li class="fragment">Cost discipline & efficiency programs</li>
+				</ul>
+				<aside class="notes">Use fragments to reveal one driver at a time; explain impact and data sources.
+				</aside>
+			</section>
+
+			<!-- Code sample with syntax highlighting -->
+			<section>
+				<h2>Example: CAGR calculation</h2>
+				<pre><code class="language-javascript">// Calculate CAGR (annualized growth)
+function cagr(beginValue, endValue, years) {
+  return Math.pow(endValue / beginValue, 1 / years) - 1;
+}
+
+console.log((cagr(100, 150, 3) * 100).toFixed(2) + '%');
+					</code></pre>
+				<aside class="notes">Show this snippet as an example of how the metric is computed; point to data
+					source.</aside>
+			</section>
+
+			<!-- Math / formula slide -->
+			<section>
+				<h2>Financial Formula: CAGR</h2>
+				<p>Compound Annual Growth Rate (CAGR):</p>
+				\[ \mathrm{CAGR} = \left(\frac{V_f}{V_i}\right)^{\frac{1}{n}} - 1 \]
+				<aside class="notes">Explain variables: V_i = initial value, V_f = final value, n = years. Use when
+					discussing growth assumptions.</aside>
+			</section>
+
+			<!-- Slide with speaker notes and a final summary -->
+			<section>
+				<h2>Summary & Next Steps</h2>
+				<ol>
+					<li class="fragment">Deliver on cost programs</li>
+					<li class="fragment">Invest in high-growth markets</li>
+					<li class="fragment">Maintain disciplined capital allocation</li>
+				</ol>
+				<aside class="notes">Close with guidance and invite follow-up by email: 24f1001694@ds.study.iitm.ac.in
+				</aside>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/math/math.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax2]
+		});
+	</script>
+</body>
+
 </html>

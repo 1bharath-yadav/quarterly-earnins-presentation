@@ -28,3 +28,9 @@ Want to create reveal.js presentation in a graphical editor? Try <https://slides
 <div align="center">
   MIT licensed | Copyright © 2011-2024 Hakim El Hattab, https://hakim.se
 </div>
+
+## Publishing
+
+This presentation is configured to be published via GitHub Pages using the `gh-pages` branch. A GitHub Actions workflow at `.github/workflows/gh-pages.yml` will deploy the repository root (including `index.html`) to the `gh-pages` branch on every push to `main`.
+
+After pushing, enable GitHub Pages for this repository (Settings → Pages) and choose the `gh-pages` branch if not already set.
